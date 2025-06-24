@@ -2,26 +2,47 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Sun, Moon } from "lucide-react";
+import { Menu, X, Sun, Moon, ChevronDown } from "lucide-react";
 import { useTheme } from "next-themes";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { theme, setTheme } = useTheme();
+  const navigate = useNavigate();
 
   const menuItems = [
-    { name: "Home", href: "#home" },
+    { name: "Home", href: "/" },
     { name: "About Us", href: "#about" },
-    { name: "Our Products", href: "#products" },
-    { name: "News & Updates", href: "#news" },
+    { name: "News & Updates", href: "/news-updates" },
     { name: "Investors", href: "#investors" },
     { name: "Contact Us", href: "#contact" },
   ];
 
-  const scrollToSection = (href: string) => {
-    const element = document.getElementById(href.substring(1));
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+  const productItems = [
+    { name: "Range of PVC Flooring", href: "/pvc-flooring" },
+    { name: "PVC Leather", href: "/pvc-leather" },
+    { name: "PVC Film & Sheeting", href: "/pvc-film" },
+    { name: "Walltastic Vinyl Wallpaper", href: "/wallpaper" },
+    { name: "Swimming Pool Liners", href: "/pool-liners" },
+    { name: "AQUALINING PVC Geomembrane", href: "/pvc-geomembrane" },
+  ];
+
+  const handleNavigation = (href: string) => {
+    if (href.startsWith("#")) {
+      const element = document.getElementById(href.substring(1));
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      navigate(href);
     }
     setIsMenuOpen(false);
   };
@@ -49,10 +70,11 @@ const Header = () => {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <motion.div
-              className="flex items-center space-x-3"
+              className="flex items-center space-x-3 cursor-pointer"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
+              onClick={() => navigate("/")}
             >
               <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center">
                 <span className="text-white font-bold text-xl">P</span>
@@ -69,12 +91,38 @@ const Header = () => {
               {menuItems.map((item) => (
                 <button
                   key={item.name}
-                  onClick={() => scrollToSection(item.href)}
+                  onClick={() => handleNavigation(item.href)}
                   className="text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 font-medium transition-colors duration-200"
                 >
                   {item.name}
                 </button>
               ))}
+
+              {/* Products Dropdown */}
+              <NavigationMenu>
+                <NavigationMenuList>
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger className="text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 font-medium transition-colors duration-200">
+                      Our Products
+                    </NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                      <div className="w-80 p-4 bg-white dark:bg-gray-800 shadow-lg rounded-lg">
+                        <div className="space-y-2">
+                          {productItems.map((product) => (
+                            <button
+                              key={product.name}
+                              onClick={() => handleNavigation(product.href)}
+                              className="w-full text-left px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-green-600 dark:hover:text-green-400 rounded-md transition-colors duration-200"
+                            >
+                              {product.name}
+                            </button>
+                          ))}
+                        </div>
+                      </div>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+                </NavigationMenuList>
+              </NavigationMenu>
               
               <Button
                 variant="ghost"
@@ -127,12 +175,25 @@ const Header = () => {
                 {menuItems.map((item) => (
                   <button
                     key={item.name}
-                    onClick={() => scrollToSection(item.href)}
+                    onClick={() => handleNavigation(item.href)}
                     className="text-left text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 font-medium transition-colors duration-200 py-2"
                   >
                     {item.name}
                   </button>
                 ))}
+                
+                <div className="border-t border-gray-200 dark:border-gray-700 pt-4">
+                  <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">Our Products</h4>
+                  {productItems.map((product) => (
+                    <button
+                      key={product.name}
+                      onClick={() => handleNavigation(product.href)}
+                      className="block w-full text-left text-gray-600 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-400 py-1 pl-4 text-sm transition-colors duration-200"
+                    >
+                      {product.name}
+                    </button>
+                  ))}
+                </div>
               </nav>
             </div>
           </motion.div>
