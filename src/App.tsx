@@ -7,6 +7,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "next-themes";
 import Index from "./pages/Index";
+import AboutUs from "./pages/AboutUs";
 import PVCFlooring from "./pages/PVCFlooring";
 import PVCLeather from "./pages/PVCLeather";
 import PVCFilm from "./pages/PVCFilm";
@@ -27,6 +28,7 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/about-us" element={<AboutUs />} />
             <Route path="/pvc-flooring" element={<PVCFlooring />} />
             <Route path="/pvc-leather" element={<PVCLeather />} />
             <Route path="/pvc-film" element={<PVCFilm />} />

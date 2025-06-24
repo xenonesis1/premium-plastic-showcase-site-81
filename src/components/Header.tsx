@@ -31,7 +31,7 @@ const Header = () => {
     },
     menu: [
       { title: "Home", url: "/" },
-      { title: "About Us", url: "#about" },
+      { title: "About Us", url: "/about-us" },
       {
         title: "Our Products",
         url: "#",
