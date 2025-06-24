@@ -7,7 +7,7 @@ const AboutUs = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main>
+      <main className="w-full">
         <AboutUsSection />
       </main>
       <Footer />
