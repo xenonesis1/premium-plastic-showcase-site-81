@@ -2,10 +2,13 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import { useTheme } from "next-themes";
+import { Sparkles } from "@/components/ui/sparkles";
 
 const IndustriesSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const { theme } = useTheme();
 
   const industries = [
     {
@@ -59,8 +62,8 @@ const IndustriesSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-white dark:bg-gray-800" ref={ref}>
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-white dark:bg-gray-800 relative overflow-hidden" ref={ref}>
+      <div className="container mx-auto px-4 relative z-10">
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 50 }}
@@ -81,7 +84,7 @@ const IndustriesSection = () => {
           {industries.map((industry, index) => (
             <motion.div
               key={index}
-              className={`${industry.color} p-6 rounded-2xl text-center hover:shadow-xl transition-all duration-300 cursor-pointer`}
+              className={`${industry.color} p-6 rounded-2xl text-center hover:shadow-xl transition-all duration-300 cursor-pointer relative`}
               initial={{ opacity: 0, scale: 0.9 }}
               animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -98,26 +101,35 @@ const IndustriesSection = () => {
           ))}
         </div>
 
-        {/* CTA Section */}
+        {/* CTA Section with Sparkles */}
         <motion.div
-          className="text-center mt-16"
+          className="text-center mt-16 relative"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-2xl shadow-2xl">
-            <h3 className="text-3xl font-bold mb-4">
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-2xl shadow-2xl relative overflow-hidden">
+            <div className="absolute inset-0 before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_bottom_center,#8350e8,transparent_70%)] before:opacity-40" />
+            <h3 className="text-3xl font-bold mb-4 relative z-10">
               Don't See Your Industry?
             </h3>
-            <p className="text-xl mb-6">
+            <p className="text-xl mb-6 relative z-10">
               We create custom solutions for unique industry requirements
             </p>
             <button
               onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-              className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300"
+              className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300 relative z-10"
             >
               Discuss Your Needs
             </button>
+            <Sparkles
+              density={800}
+              className="absolute inset-0 h-full w-full [mask-image:radial-gradient(50%_50%,white,transparent_85%)]"
+              color={theme === "dark" ? "#ffffff" : "#8350e8"}
+              size={1}
+              speed={0.5}
+              opacity={0.7}
+            />
           </div>
         </motion.div>
       </div>
