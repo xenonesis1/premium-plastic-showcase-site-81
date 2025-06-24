@@ -15,11 +15,11 @@ const HeroSection = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
-          alt="Industrial Manufacturing"
+          src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+          alt="Leather Manufacturing"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-gray-900/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 to-gray-800/70"></div>
       </div>
 
       {/* Content */}
@@ -30,17 +30,17 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Leading Manufacturer of
-          <span className="block text-orange-400">Injection Moulded Plastic Products</span>
+          <span className="block text-green-400">Artificial Leather</span>
+          <span className="block">& Premium Products</span>
         </motion.h1>
 
         <motion.p
-          className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed text-gray-200"
+          className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed text-gray-200"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          Premium quality plastic crates, bins, pallets, and custom solutions for industries worldwide
+          For the Automotive, Interiors, Healthcare and general household applications
         </motion.p>
 
         <motion.div
@@ -52,43 +52,12 @@ const HeroSection = () => {
           <Button
             size="lg"
             onClick={scrollToProducts}
-            className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 text-lg font-semibold transition-all duration-300 transform hover:scale-105"
+            className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 text-lg font-semibold transition-all duration-300 transform hover:scale-105"
           >
-            Explore Products
-          </Button>
-          <Button
-            variant="outline"
-            size="lg"
-            onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-            className="border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 text-lg font-semibold transition-all duration-300"
-          >
-            Get Quote
+            Read More
           </Button>
         </motion.div>
-
-        {/* Floating Elements */}
-        <motion.div
-          className="absolute top-20 left-10 w-20 h-20 border-2 border-orange-400 rounded-full opacity-30"
-          animate={{ y: [0, -20, 0] }}
-          transition={{ duration: 3, repeat: Infinity }}
-        />
-        <motion.div
-          className="absolute bottom-32 right-10 w-16 h-16 border-2 border-blue-400 rounded-full opacity-40"
-          animate={{ y: [0, 20, 0] }}
-          transition={{ duration: 4, repeat: Infinity, delay: 1 }}
-        />
       </div>
-
-      {/* Scroll Indicator */}
-      <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-      >
-        <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white rounded-full mt-2"></div>
-        </div>
-      </motion.div>
     </section>
   );
 };
