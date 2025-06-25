@@ -61,7 +61,7 @@ export default function AboutUsSection() {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 0.6, ease: "easeOut" },
+      transition: { duration: 0.6 },
     },
   }
 
@@ -369,7 +369,7 @@ interface ServiceItemProps {
   description: string
   variants: {
     hidden: { opacity: number; y?: number }
-    visible: { opacity: number; y?: number; transition: { duration: number; ease: string } }
+    visible: { opacity: number; y?: number; transition: { duration: number } }
   }
   delay: number
   direction: "left" | "right"
@@ -380,14 +380,14 @@ function ServiceItem({ icon, secondaryIcon, title, description, variants, delay,
     <motion.div
       className="flex flex-col group"
       variants={variants}
-      transition={{ delay }}
+      transition={{ delay, ease: "easeOut" }}
       whileHover={{ y: -5, transition: { duration: 0.2 } }}
     >
       <motion.div
         className="flex items-center gap-3 mb-3"
         initial={{ x: direction === "left" ? -20 : 20, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.6, delay: delay + 0.2 }}
+        transition={{ duration: 0.6, delay: delay + 0.2, ease: "easeOut" }}
       >
         <motion.div
           className="text-green-600 dark:text-green-400 bg-green-500/10 dark:bg-green-400/10 p-3 rounded-lg transition-colors duration-300 group-hover:bg-green-500/20 dark:group-hover:bg-green-400/20 relative"
@@ -459,7 +459,7 @@ function StatCounter({ icon, value, label, suffix, delay }: StatCounterProps) {
         visible: {
           opacity: 1,
           y: 0,
-          transition: { duration: 0.6, delay, ease: "easeOut" },
+          transition: { duration: 0.6, delay },
         },
       }}
       whileHover={{ y: -5, transition: { duration: 0.2 } }}
