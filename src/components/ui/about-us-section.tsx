@@ -61,7 +61,7 @@ export default function AboutUsSection() {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 0.6, ease: [0.4, 0, 0.2, 1] },
+      transition: { duration: 0.6, ease: "easeOut" },
     },
   }
 
@@ -146,8 +146,8 @@ export default function AboutUsSection() {
         }}
         transition={{
           duration: 3,
-          repeat: Number.POSITIVE_INFINITY,
-          ease: [0.4, 0, 0.2, 1],
+          repeat: Infinity,
+          ease: "easeInOut",
         }}
       />
       <motion.div
@@ -158,8 +158,8 @@ export default function AboutUsSection() {
         }}
         transition={{
           duration: 4,
-          repeat: Number.POSITIVE_INFINITY,
-          ease: [0.4, 0, 0.2, 1],
+          repeat: Infinity,
+          ease: "easeInOut",
           delay: 1,
         }}
       />
@@ -279,8 +279,8 @@ export default function AboutUsSection() {
                 }}
                 transition={{
                   duration: 2,
-                  repeat: Number.POSITIVE_INFINITY,
-                  ease: [0.4, 0, 0.2, 1],
+                  repeat: Infinity,
+                  ease: "easeInOut",
                 }}
               ></motion.div>
               <motion.div
@@ -291,8 +291,8 @@ export default function AboutUsSection() {
                 }}
                 transition={{
                   duration: 2,
-                  repeat: Number.POSITIVE_INFINITY,
-                  ease: [0.4, 0, 0.2, 1],
+                  repeat: Infinity,
+                  ease: "easeInOut",
                   delay: 0.5,
                 }}
               ></motion.div>
@@ -369,7 +369,7 @@ interface ServiceItemProps {
   description: string
   variants: {
     hidden: { opacity: number; y?: number }
-    visible: { opacity: number; y?: number; transition: { duration: number; ease: number[] } }
+    visible: { opacity: number; y?: number; transition: { duration: number; ease: string } }
   }
   delay: number
   direction: "left" | "right"
