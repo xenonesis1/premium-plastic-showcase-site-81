@@ -61,7 +61,7 @@ export default function AboutUsSection() {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 0.6, ease: "easeOut" },
+      transition: { duration: 0.6, ease: [0.4, 0, 0.2, 1] },
     },
   }
 
@@ -369,7 +369,7 @@ interface ServiceItemProps {
   description: string
   variants: {
     hidden: { opacity: number; y?: number }
-    visible: { opacity: number; y?: number; transition: { duration: number; ease: string } }
+    visible: { opacity: number; y?: number; transition: { duration: number; ease: number[] } }
   }
   delay: number
   direction: "left" | "right"
@@ -459,7 +459,7 @@ function StatCounter({ icon, value, label, suffix, delay }: StatCounterProps) {
         visible: {
           opacity: 1,
           y: 0,
-          transition: { duration: 0.6, delay },
+          transition: { duration: 0.6, delay, ease: [0.4, 0, 0.2, 1] },
         },
       }}
       whileHover={{ y: -5, transition: { duration: 0.2 } }}
