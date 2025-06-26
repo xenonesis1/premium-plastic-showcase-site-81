@@ -23,7 +23,7 @@ export function CenterImage({ y1, y2 }: CenterImageProps) {
         >
           <img
             src="https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-            alt="Premier LeatherCom Manufacturing"
+            alt="ToptexVinyl Manufacturing"
             className="w-full h-64 sm:h-80 lg:h-96 object-cover"
           />
           <motion.div

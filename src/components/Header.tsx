@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -26,8 +25,8 @@ const Header = () => {
     logo: {
       url: "/",
       src: "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80",
-      alt: "Premier LeatherCom Logo",
-      title: "Premier LeatherCom",
+      alt: "ToptexVinyl Logo",
+      title: "ToptexVinyl",
     },
     menu: [
       { title: "Home", url: "/" },

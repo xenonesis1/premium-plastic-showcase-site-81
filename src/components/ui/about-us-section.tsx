@@ -56,10 +56,10 @@ export default function AboutUsSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <Zap className="w-4 h-4" />
-            ABOUT PREMIER LEATHERCOM
+            ABOUT TOPTEXVINYL
           </motion.span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light mb-4 text-center text-gray-900 dark:text-white">
-            PVC Manufacturing Excellence
+            Artificial Leather Excellence
           </h2>
           <motion.div
             className="w-16 sm:w-20 lg:w-24 h-0.5 sm:h-1 bg-green-600 dark:bg-green-400"
@@ -73,7 +73,7 @@ export default function AboutUsSection() {
           className="text-center max-w-4xl mx-auto mb-12 sm:mb-16 lg:mb-20 text-gray-600 dark:text-gray-300 text-sm sm:text-base lg:text-lg leading-relaxed px-4" 
           variants={itemVariants}
         >
-          Since 1992, Premier LeatherCom has been a leading manufacturer of high-quality PVC products serving automotive, transport, construction, and industrial sectors. Our ISO-certified facility delivers innovative solutions with uncompromising quality standards.
+          ToptexVinyl is a trusted name in high-quality artificial leather, delivering unmatched quality for automotive, furniture, fashion, and sports industries. Our commitment to excellence and innovation has made us a preferred choice for businesses worldwide.
         </motion.p>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 relative">
@@ -145,7 +145,7 @@ export default function AboutUsSection() {
           transition={{ duration: 0.8, delay: 0.5 }}
         >
           <div className="flex-1 text-center sm:text-left">
-            <h3 className="text-xl sm:text-2xl font-medium mb-2">Ready to explore our PVC solutions?</h3>
+            <h3 className="text-xl sm:text-2xl font-medium mb-2">Ready to explore our artificial leather solutions?</h3>
             <p className="text-white/80 text-sm sm:text-base">Let's discuss your manufacturing requirements.</p>
           </div>
           <motion.button
