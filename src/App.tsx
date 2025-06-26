@@ -9,12 +9,15 @@ import { ThemeProvider } from "next-themes";
 import Index from "./pages/Index";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
-import PVCFlooring from "./pages/PVCFlooring";
-import PVCLeather from "./pages/PVCLeather";
-import PVCFilm from "./pages/PVCFilm";
-import Wallpaper from "./pages/Wallpaper";
-import PoolLiners from "./pages/PoolLiners";
-import PVCGeomembrane from "./pages/PVCGeomembrane";
+import Upholstery from "./pages/Upholstery";
+import Automotive from "./pages/Automotive";
+import Shoes from "./pages/Shoes";
+import Belts from "./pages/Belts";
+import Jackets from "./pages/Jackets";
+import OfficeChairs from "./pages/OfficeChairs";
+import DiaryCovers from "./pages/DiaryCovers";
+import BeanBagChairs from "./pages/BeanBagChairs";
+import SportsEquipment from "./pages/SportsEquipment";
 import NewsUpdates from "./pages/NewsUpdates";
 import NotFound from "./pages/NotFound";
 
@@ -31,12 +34,15 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/about-us" element={<AboutUs />} />
             <Route path="/contact-us" element={<ContactUs />} />
-            <Route path="/pvc-flooring" element={<PVCFlooring />} />
-            <Route path="/pvc-leather" element={<PVCLeather />} />
-            <Route path="/pvc-film" element={<PVCFilm />} />
-            <Route path="/wallpaper" element={<Wallpaper />} />
-            <Route path="/pool-liners" element={<PoolLiners />} />
-            <Route path="/pvc-geomembrane" element={<PVCGeomembrane />} />
+            <Route path="/upholstery" element={<Upholstery />} />
+            <Route path="/automotive" element={<Automotive />} />
+            <Route path="/shoes" element={<Shoes />} />
+            <Route path="/belts" element={<Belts />} />
+            <Route path="/jackets" element={<Jackets />} />
+            <Route path="/office-chairs" element={<OfficeChairs />} />
+            <Route path="/diary-covers" element={<DiaryCovers />} />
+            <Route path="/bean-bag-chairs" element={<BeanBagChairs />} />
+            <Route path="/sports-equipment" element={<SportsEquipment />} />
             <Route path="/news-updates" element={<NewsUpdates />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

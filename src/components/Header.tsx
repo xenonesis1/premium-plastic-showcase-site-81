@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -36,40 +37,58 @@ const Header = () => {
         url: "#",
         items: [
           {
-            title: "PVC Flooring",
-            description: "Superior flooring solutions for transport industries",
+            title: "Upholstery",
+            description: "Premium artificial leather for sofas and chairs",
             icon: <Book className="size-5 shrink-0" />,
-            url: "/pvc-flooring",
+            url: "/upholstery",
           },
           {
-            title: "PVC Leather",
-            description: "Artificial leather for automotive & transport",
+            title: "Automotive",
+            description: "High-quality car seat covers and interior solutions",
             icon: <Trees className="size-5 shrink-0" />,
-            url: "/pvc-leather",
+            url: "/automotive",
           },
           {
-            title: "PVC Film & Sheeting",
-            description: "For automotive, interiors, and healthcare",
+            title: "Shoes",
+            description: "Durable artificial leather for footwear manufacturing",
             icon: <Sunset className="size-5 shrink-0" />,
-            url: "/pvc-film",
+            url: "/shoes",
           },
           {
-            title: "Wallpaper",
-            description: "Self adhesive films and decoration wallpapers",
+            title: "Belts",
+            description: "Premium synthetic leather for belt manufacturing",
             icon: <Zap className="size-5 shrink-0" />,
-            url: "/wallpaper",
+            url: "/belts",
           },
           {
-            title: "Pool Liners",
-            description: "High-quality pool liners and accessories",
+            title: "Jackets",
+            description: "Fashion-grade artificial leather for outerwear",
             icon: <Book className="size-5 shrink-0" />,
-            url: "/pool-liners",
+            url: "/jackets",
           },
           {
-            title: "PVC Geomembrane",
-            description: "Underground structure waterproofing solutions",
+            title: "Office Chairs",
+            description: "Professional grade leather for office furniture",
             icon: <Trees className="size-5 shrink-0" />,
-            url: "/pvc-geomembrane",
+            url: "/office-chairs",
+          },
+          {
+            title: "Diary Covers",
+            description: "Elegant leather for stationery applications",
+            icon: <Sunset className="size-5 shrink-0" />,
+            url: "/diary-covers",
+          },
+          {
+            title: "Bean Bag Chairs",
+            description: "Comfortable synthetic leather for casual furniture",
+            icon: <Zap className="size-5 shrink-0" />,
+            url: "/bean-bag-chairs",
+          },
+          {
+            title: "Sports Equipment",
+            description: "Specialized leather for cricket, football & sports gear",
+            icon: <Book className="size-5 shrink-0" />,
+            url: "/sports-equipment",
           },
         ],
       },
@@ -82,12 +101,6 @@ const Header = () => {
             description: "ISO certified quality management systems",
             icon: <Zap className="size-5 shrink-0" />,
             url: "#quality",
-          },
-          {
-            title: "Industries Served",
-            description: "Automotive, transport, construction & more",
-            icon: <Sunset className="size-5 shrink-0" />,
-            url: "#industries",
           },
           {
             title: "Custom Solutions",

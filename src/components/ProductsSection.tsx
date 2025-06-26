@@ -12,46 +12,67 @@ const ProductsSection = () => {
 
   const products = [
     {
-      title: "Range of PVC Flooring",
-      description: "Superior Flooring Solutions for Bus Transport, Metros, Our Premier, Auto and Rail Flooring - Full Sizes - Printing & Quality Flooring",
+      title: "Upholstery",
+      description: "Premium artificial leather for sofas, chairs, and furniture upholstery applications",
       image: "https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
       buttonText: "View All",
-      href: "/pvc-flooring"
+      href: "/upholstery"
     },
     {
-      title: "PVC Leather",
-      description: "Serving the Automotive & Transport Industries PVC Artificial Leather - Seating & Interiors",
+      title: "Automotive",
+      description: "High-quality car seat covers and automotive interior solutions",
       image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
       buttonText: "View All",
-      href: "/pvc-leather"
+      href: "/automotive"
     },
     {
-      title: "PVC Film & Sheeting",
-      description: "For the Automotive, Interiors, Healthcare and general household applications",
-      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      title: "Shoes",
+      description: "Durable and stylish artificial leather for footwear manufacturing",
+      image: "https://images.unsplash.com/photo-1549298916-b41d501d3772?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
       buttonText: "View All",
-      href: "/pvc-film"
+      href: "/shoes"
     },
     {
-      title: "Wallpaper",
-      description: "Self Adhesive Films- Car Wrapping, Exterior and Interior Decoration Wallpapers",
-      image: "https://images.unsplash.com/photo-1566125882500-87e10f726cdc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      title: "Belts",
+      description: "Premium quality synthetic leather for belt manufacturing",
+      image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
       buttonText: "View All",
-      href: "/wallpaper"
+      href: "/belts"
     },
     {
-      title: "Pool Liners",
-      description: "Pool Liners and Many More",
-      image: "https://images.unsplash.com/photo-1544966503-7cc5ac882d5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      title: "Jackets",
+      description: "High-grade artificial leather for fashion jackets and outerwear",
+      image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
       buttonText: "View All",
-      href: "/pool-liners"
+      href: "/jackets"
     },
     {
-      title: "PVC Geomembrane",
-      description: "Underground Structure Water Proofing",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      title: "Office Chairs",
+      description: "Professional grade synthetic leather for office and executive chairs",
+      image: "https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
       buttonText: "View All",
-      href: "/pvc-geomembrane"
+      href: "/office-chairs"
+    },
+    {
+      title: "Diary Covers",
+      description: "Elegant artificial leather for diary covers and stationery applications",
+      image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      buttonText: "View All",
+      href: "/diary-covers"
+    },
+    {
+      title: "Bean Bag Chairs",
+      description: "Comfortable and durable synthetic leather for bean bag furniture",
+      image: "https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      buttonText: "View All",
+      href: "/bean-bag-chairs"
+    },
+    {
+      title: "Sports Equipment",
+      description: "Specialized artificial leather for cricket pads, gloves, footballs, and sports gear",
+      image: "https://images.unsplash.com/photo-1579952363873-27d3bfad9c0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      buttonText: "View All",
+      href: "/sports-equipment"
     }
   ];
 
@@ -65,7 +86,7 @@ const ProductsSection = () => {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-8">
-            Product Range
+            Our Products
           </h2>
         </motion.div>
 
