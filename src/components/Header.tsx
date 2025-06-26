@@ -93,13 +93,13 @@ const Header = () => {
             title: "Custom Solutions",
             description: "Tailored products for specific requirements",
             icon: <Trees className="size-5 shrink-0" />,
-            url: "#contact",
+            url: "/contact-us",
           },
           {
             title: "Technical Support",
             description: "Expert consultation and competitive quotes",
             icon: <Book className="size-5 shrink-0" />,
-            url: "#contact",
+            url: "/contact-us",
           },
         ],
       },
@@ -109,7 +109,7 @@ const Header = () => {
       },
       {
         title: "Contact",
-        url: "#contact",
+        url: "/contact-us",
       },
     ],
     mobileExtraLinks: [
@@ -119,8 +119,8 @@ const Header = () => {
       { name: "Terms of Service", url: "#terms" },
     ],
     auth: {
-      login: { text: "Get Quote", url: "#contact" },
-      signup: { text: "Contact Us", url: "#contact" },
+      login: { text: "Get Quote", url: "/contact-us" },
+      signup: { text: "Contact Us", url: "/contact-us" },
     },
   };
 
