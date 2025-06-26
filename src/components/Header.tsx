@@ -131,8 +131,8 @@ const Header = () => {
       <div className="bg-green-600 text-white text-xs sm:text-sm py-2">
         <div className="container mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-0">
           <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-4 text-center sm:text-left">
-            <span className="flex items-center gap-1">📧 info@premierleathercom.com</span>
-            <span className="flex items-center gap-1">📞 +91 89208 31225</span>
+            <span className="flex items-center gap-1">📧 contact@toptexvinyl.com</span>
+            <span className="flex items-center gap-1">📞 +91 9810765284</span>
           </div>
           <div className="flex items-center space-x-2 sm:space-x-4">
             <Button

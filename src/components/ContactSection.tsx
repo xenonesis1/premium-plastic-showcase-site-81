@@ -68,10 +68,10 @@ const ContactSection = () => {
                   📍
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Address</h4>
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Work Location</h4>
                   <p className="text-gray-600 dark:text-gray-300">
-                    Industrial Area, Sector 25<br />
-                    Ghaziabad, Uttar Pradesh 201010<br />
+                    Delhi NCR<br />
+                    (Work From Home based)<br />
                     India
                   </p>
                 </div>
@@ -84,8 +84,7 @@ const ContactSection = () => {
                 <div>
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Phone</h4>
                   <p className="text-gray-600 dark:text-gray-300">
-                    +91 89208 31225<br />
-                    +91 120 2385686
+                    +91 9810765284
                   </p>
                 </div>
               </div>
@@ -97,8 +96,7 @@ const ContactSection = () => {
                 <div>
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Email</h4>
                   <p className="text-gray-600 dark:text-gray-300">
-                    info@premiumleathercom.com<br />
-                    sales@premiumleathercom.com
+                    contact@toptexvinyl.com
                   </p>
                 </div>
               </div>
@@ -198,7 +196,7 @@ const ContactSection = () => {
         >
           <div className="bg-white dark:bg-gray-800 p-4 rounded-2xl shadow-xl">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.3832558!2d77.3410!3d28.6692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf1691cac2a81%3A0x37f4b8f8e7e2a65d!2sGhaziabad%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1635789012345!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448193.9511989544!2d76.76356251956677!3d28.64369750000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x52c2b7494e204dce!2sDelhi%20NCR!5e0!3m2!1sen!2sin!4v1635789012345!5m2!1sen!2sin"
               width="100%"
               height="400"
               style={{ border: 0 }}
