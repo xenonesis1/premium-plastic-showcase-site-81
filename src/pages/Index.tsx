@@ -5,6 +5,7 @@ import TestimonialsComponent from "@/components/TestimonialsSection";
 import ScrollAnimationSection from "@/components/ScrollAnimationSection";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => {
   return (
@@ -17,6 +18,7 @@ const Index = () => {
         <TestimonialsComponent />
       </main>
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };

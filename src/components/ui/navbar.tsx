@@ -242,13 +242,13 @@ const renderMenuItem = (item: MenuItem) => {
           {item.title}
         </NavigationMenuTrigger>
         <NavigationMenuContent>
-          <ul className="w-96 p-4 bg-white/95 backdrop-blur-lg border border-gray-100 shadow-xl rounded-xl">
+          <ul className="w-80 p-3 bg-white/95 backdrop-blur-lg border border-gray-100 shadow-xl rounded-xl">
             <NavigationMenuLink>
-              <div className="grid gap-2">
+              <div className="grid gap-1">
                 {item.items.map((subItem) => (
                   <li key={subItem.title}>
                     <a
-                      className="flex select-none gap-4 rounded-lg p-4 leading-none no-underline outline-none transition-all hover:bg-gradient-to-r hover:from-green-50 hover:to-blue-50 hover:shadow-md group"
+                      className="flex select-none gap-3 rounded-lg p-3 leading-none no-underline outline-none transition-all hover:bg-gradient-to-r hover:from-green-50 hover:to-blue-50 hover:shadow-md group"
                       href={subItem.url}
                     >
                       <div className="flex-shrink-0 group-hover:scale-110 transition-transform">
@@ -259,7 +259,7 @@ const renderMenuItem = (item: MenuItem) => {
                           {subItem.title}
                         </div>
                         {subItem.description && (
-                          <p className="text-sm leading-relaxed text-muted-foreground group-hover:text-gray-600 transition-colors mt-1">
+                          <p className="text-xs leading-relaxed text-muted-foreground group-hover:text-gray-600 transition-colors mt-1">
                             {subItem.description}
                           </p>
                         )}
