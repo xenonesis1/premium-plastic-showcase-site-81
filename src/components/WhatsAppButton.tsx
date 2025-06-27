@@ -20,7 +20,7 @@ const WhatsAppButton = () => {
       
       // Open WhatsApp with a pre-filled message
       const message = encodeURIComponent("Hi! I'm interested in your artificial leather products. Please provide more information.");
-      const phoneNumber = "+919810765284"; // You can update this with your actual WhatsApp number
+      const phoneNumber = "+918585850739"; // Updated contact number
       window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
       
     } catch (error) {

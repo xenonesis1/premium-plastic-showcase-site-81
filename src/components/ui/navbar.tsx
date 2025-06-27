@@ -1,5 +1,6 @@
 
 import { Book, Menu, Sunset, Trees, Zap } from "lucide-react";
+import { Link } from "react-router-dom";
 
 import {
   Accordion,
@@ -151,10 +152,10 @@ const Navbar1 = ({
       <div className="container">
         <nav className="hidden justify-between lg:flex">
           <div className="flex items-center gap-8">
-            <a href={logo.url} className="flex items-center gap-3 group">
+            <Link to={logo.url} className="flex items-center gap-3 group">
               <img src={logo.src} className="w-10 h-10 rounded-lg shadow-md group-hover:shadow-lg transition-shadow" alt={logo.alt} />
               <span className="text-xl font-bold bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">{logo.title}</span>
-            </a>
+            </Link>
             <div className="flex items-center">
               <NavigationMenu>
                 <NavigationMenuList className="gap-2">
@@ -165,19 +166,19 @@ const Navbar1 = ({
           </div>
           <div className="flex gap-3">
             <Button asChild variant="outline" size="sm" className="hover:bg-green-50 hover:border-green-300 transition-colors">
-              <a href={auth.login.url}>{auth.login.text}</a>
+              <Link to={auth.login.url}>{auth.login.text}</Link>
             </Button>
             <Button asChild size="sm" className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 shadow-md hover:shadow-lg transition-all">
-              <a href={auth.signup.url}>{auth.signup.text}</a>
+              <Link to={auth.signup.url}>{auth.signup.text}</Link>
             </Button>
           </div>
         </nav>
         <div className="block lg:hidden">
           <div className="flex items-center justify-between">
-            <a href={logo.url} className="flex items-center gap-3">
+            <Link to={logo.url} className="flex items-center gap-3">
               <img src={logo.src} className="w-8 h-8 rounded-lg shadow-md" alt={logo.alt} />
               <span className="text-lg font-bold bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">{logo.title}</span>
-            </a>
+            </Link>
             <Sheet>
               <SheetTrigger asChild>
                 <Button variant="outline" size="icon" className="hover:bg-green-50 transition-colors">
@@ -187,12 +188,12 @@ const Navbar1 = ({
               <SheetContent className="overflow-y-auto bg-white/95 backdrop-blur-lg">
                 <SheetHeader>
                   <SheetTitle>
-                    <a href={logo.url} className="flex items-center gap-3">
+                    <Link to={logo.url} className="flex items-center gap-3">
                       <img src={logo.src} className="w-8 h-8 rounded-lg shadow-md" alt={logo.alt} />
                       <span className="text-lg font-bold bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
                         {logo.title}
                       </span>
-                    </a>
+                    </Link>
                   </SheetTitle>
                 </SheetHeader>
                 <div className="my-8 flex flex-col gap-6">
@@ -206,22 +207,22 @@ const Navbar1 = ({
                   <div className="border-t pt-6">
                     <div className="grid grid-cols-2 gap-2">
                       {mobileExtraLinks.map((link, idx) => (
-                        <a
+                        <Link
                           key={idx}
                           className="inline-flex h-12 items-center gap-2 whitespace-nowrap rounded-lg px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-green-50 hover:text-green-600"
-                          href={link.url}
+                          to={link.url}
                         >
                           {link.name}
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   </div>
                   <div className="flex flex-col gap-3">
                     <Button asChild variant="outline" className="hover:bg-green-50 hover:border-green-300 transition-colors">
-                      <a href={auth.login.url}>{auth.login.text}</a>
+                      <Link to={auth.login.url}>{auth.login.text}</Link>
                     </Button>
                     <Button asChild className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800">
-                      <a href={auth.signup.url}>{auth.signup.text}</a>
+                      <Link to={auth.signup.url}>{auth.signup.text}</Link>
                     </Button>
                   </div>
                 </div>
@@ -247,9 +248,9 @@ const renderMenuItem = (item: MenuItem) => {
               <div className="grid gap-1">
                 {item.items.map((subItem) => (
                   <li key={subItem.title}>
-                    <a
+                    <Link
                       className="flex select-none gap-3 rounded-lg p-3 leading-none no-underline outline-none transition-all hover:bg-gradient-to-r hover:from-green-50 hover:to-blue-50 hover:shadow-md group"
-                      href={subItem.url}
+                      to={subItem.url}
                     >
                       <div className="flex-shrink-0 group-hover:scale-110 transition-transform">
                         {subItem.icon}
@@ -264,7 +265,7 @@ const renderMenuItem = (item: MenuItem) => {
                           </p>
                         )}
                       </div>
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </div>
@@ -276,13 +277,13 @@ const renderMenuItem = (item: MenuItem) => {
   }
 
   return (
-    <a
+    <Link
       key={item.title}
       className="group inline-flex h-10 w-max items-center justify-center rounded-lg bg-background px-4 py-2 text-sm font-medium text-muted-foreground transition-all hover:bg-green-50 hover:text-green-700 hover:shadow-sm"
-      href={item.url}
+      to={item.url}
     >
       {item.title}
-    </a>
+    </Link>
   );
 };
 
@@ -296,10 +297,10 @@ const renderMobileMenuItem = (item: MenuItem) => {
         <AccordionContent className="mt-2">
           <div className="grid gap-2">
             {item.items.map((subItem) => (
-              <a
+              <Link
                 key={subItem.title}
                 className="flex select-none gap-4 rounded-lg p-3 leading-none outline-none transition-all hover:bg-gradient-to-r hover:from-green-50 hover:to-blue-50 group"
-                href={subItem.url}
+                to={subItem.url}
               >
                 <div className="flex-shrink-0 group-hover:scale-110 transition-transform">
                   {subItem.icon}
@@ -314,7 +315,7 @@ const renderMobileMenuItem = (item: MenuItem) => {
                     </p>
                   )}
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
         </AccordionContent>
@@ -323,9 +324,9 @@ const renderMobileMenuItem = (item: MenuItem) => {
   }
 
   return (
-    <a key={item.title} href={item.url} className="font-semibold py-2 hover:text-green-600 transition-colors">
+    <Link key={item.title} to={item.url} className="font-semibold py-2 hover:text-green-600 transition-colors">
       {item.title}
-    </a>
+    </Link>
   );
 };
 

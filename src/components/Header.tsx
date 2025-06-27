@@ -153,7 +153,7 @@ const Header = () => {
               className="flex items-center gap-2 hover:text-green-100 transition-colors cursor-pointer"
               whileHover={{ scale: 1.05 }}
             >
-              📞 +91 9810765284
+              📞 +91 8585850739
             </motion.span>
           </div>
           <div className="flex items-center space-x-3 sm:space-x-4">
