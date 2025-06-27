@@ -8,9 +8,9 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50">
       <Header />
-      <main>
+      <main className="overflow-hidden">
         <HeroSection />
         <ScrollAnimationSection />
         <QualitySection />
