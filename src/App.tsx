@@ -9,7 +9,6 @@ import { ThemeProvider } from "next-themes";
 import Index from "./pages/Index";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
-import Blog from "./pages/Blog";
 import Upholstery from "./pages/Upholstery";
 import Automotive from "./pages/Automotive";
 import Shoes from "./pages/Shoes";
@@ -35,7 +34,6 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/about-us" element={<AboutUs />} />
             <Route path="/contact-us" element={<ContactUs />} />
-            <Route path="/blog" element={<Blog />} />
             <Route path="/upholstery" element={<Upholstery />} />
             <Route path="/automotive" element={<Automotive />} />
             <Route path="/shoes" element={<Shoes />} />
