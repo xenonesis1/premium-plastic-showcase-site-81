@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Facebook, Instagram, Mail, MapPin, Phone } from "lucide-react";
 
@@ -14,9 +13,11 @@ const Footer = () => {
             className="col-span-2"
           >
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center font-bold text-xl">
-                T
-              </div>
+              <img 
+                src="/lovable-uploads/39045c23-2251-496a-92ff-661486780f27.png" 
+                className="w-12 h-12 rounded-lg shadow-md" 
+                alt="ToptexVinyl Logo" 
+              />
               <h3 className="text-2xl font-bold">ToptexVinyl</h3>
             </div>
             <p className="text-gray-300 mb-6 max-w-md leading-relaxed">

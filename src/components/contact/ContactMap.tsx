@@ -20,7 +20,7 @@ export const ContactMap = ({ isInView }: ContactMapProps) => {
           </h3>
           <div className="aspect-video rounded-lg overflow-hidden">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.8972643147975!2d77.45559858548213!3d28.653067282407334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd3d3d3d3d3d%3A0x3d3d3d3d3d3d3d3d!2s28%C2%B039'11.0%22N%2077%C2%B027'29.4%22E!5e0!3m2!1sen!2sin!4v1635000000000!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.8972643147975!2d77.45559858548213!3d28.653067282407334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd460511ab63%3A0x67c14c54e7c6b68!2s28%C2%B039'11.0%22N%2077%C2%B027'29.4%22E!5e0!3m2!1sen!2sin!4v1635000000000!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ border: 0 }}
