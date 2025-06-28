@@ -5,22 +5,19 @@ import ScrollAnimationSection from "@/components/ScrollAnimationSection";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import { AuroraBackground } from "@/components/ui/aurora-background";
 
 const Index = () => {
   return (
-    <AuroraBackground className="min-h-screen" showRadialGradient={false}>
-      <div className="relative z-10 w-full">
-        <Header />
-        <main className="overflow-hidden">
-          <HeroSection />
-          <ScrollAnimationSection />
-          <TestimonialsComponent />
-        </main>
-        <Footer />
-        <WhatsAppButton />
-      </div>
-    </AuroraBackground>
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50">
+      <Header />
+      <main className="overflow-hidden">
+        <HeroSection />
+        <ScrollAnimationSection />
+        <TestimonialsComponent />
+      </main>
+      <Footer />
+      <WhatsAppButton />
+    </div>
   );
 };
 
