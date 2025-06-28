@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Facebook, Instagram, Mail, MapPin, Phone } from "lucide-react";
 
@@ -14,9 +13,11 @@ const Footer = () => {
             className="col-span-2"
           >
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center font-bold text-xl">
-                T
-              </div>
+              <img 
+                src="/lovable-uploads/39045c23-2251-496a-92ff-661486780f27.png" 
+                className="w-12 h-12 rounded-lg shadow-md" 
+                alt="ToptexVinyl Logo" 
+              />
               <h3 className="text-2xl font-bold">ToptexVinyl</h3>
             </div>
             <p className="text-gray-300 mb-6 max-w-md leading-relaxed">
@@ -25,7 +26,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://www.facebook.com"
+                href="https://www.facebook.com/share/16R8ZBNMwj/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center transition-colors"
@@ -33,8 +34,8 @@ const Footer = () => {
                 <Facebook className="w-5 h-5" />
               </a>
               <a
-                href="https://www.instagram.com"
-                target="_blank" 
+                href="https://www.instagram.com/toptexvinyl?igsh=bHFqaXMyc3RtMXd0"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-pink-600 hover:bg-pink-700 rounded-full flex items-center justify-center transition-colors"
               >
@@ -52,7 +53,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li><a href="/about-us" className="text-gray-300 hover:text-white transition-colors">About Us</a></li>
               <li><a href="/automotive" className="text-gray-300 hover:text-white transition-colors">Automotive</a></li>
-              <li><a href="/upholstery" className="text-gray-300 hover:text-white transition-colors">Upholstery</a></li>
+              <li><a href="/pvc-film" className="text-gray-300 hover:text-white transition-colors">PVC Films</a></li>
               <li><a href="/belts" className="text-gray-300 hover:text-white transition-colors">Belts</a></li>
               <li><a href="/contact-us" className="text-gray-300 hover:text-white transition-colors">Contact</a></li>
             </ul>
