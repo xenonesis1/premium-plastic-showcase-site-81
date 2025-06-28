@@ -25,7 +25,7 @@ const Header = () => {
   const navbarData = {
     logo: {
       url: "/",
-      src: "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80",
+      src: "/lovable-uploads/a556f86d-7451-4853-9fd8-081a090e5d91.png",
       alt: "ToptexVinyl Logo",
       title: "ToptexVinyl",
     },
